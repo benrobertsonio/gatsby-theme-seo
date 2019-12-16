@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/@benrobertson/gatsby-theme-seo)
+[![npm](https://img.shields.io/npm/v/@benrobertson/gatsby-theme-seo)](https://www.npmjs.com/package/@benrobertson/gatsby-theme-seo)
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -9,9 +9,25 @@
   gatsby-theme-seo
 </h1>
 
+This theme adds SEO related packages and configuration. The following packages are enabled by default:
+
+- gatsby-plugin-react-helmet
+- gatsby-plugin-catch-links
+- gatsby-plugin-robots-txt
+- gatsby-plugin-advanced-sitemap
+
+These packages are also included, but not enabled by default:
+
+- gatsby-plugin-google-tagmanager
+- gatsby-plugin-force-trailing-slashes
+
+## Install
+
 ```shell
 npm install @benrobertson/gatsby-theme-seo
 ```
+
+## Configure
 
 In your `gatsby-config.js`:
 
@@ -25,6 +41,10 @@ module.exports = {
       requiredEnvVars: [
        'URL'
       ],
+
+      // If true, forces trailing slashes.
+      // Set to false by default.
+      forceTrailingSlash: false,
 
       // The Google Tag Manager ID you want to add.
       // Will only add in production by default.
