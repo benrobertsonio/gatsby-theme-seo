@@ -1,53 +1,56 @@
 [![npm version](https://badge.fury.io/js/%40benrobertson%2Fgatsby-theme-seo.svg)](https://badge.fury.io/js/%40benrobertson%2Fgatsby-theme-seo)
 
-# Needs Update - The smallest possible Gatsby theme
-
-## Quick Start
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  gatsby-theme-seo
+</h1>
 
 ```shell
-mkdir my-site
-cd my-site
-yarn init
-# install gatsby-theme-minimal and it's dependencies
-yarn add gatsby react react-dom gatsby-theme-minimal
+npm install @benrobertson/gatsby-theme-seo
 ```
 
-Then add the theme to your `gatsby-config.js`. We'll use the long form
-here for education purposes.
+In your `gatsby-config.js`:
 
-```javascript
+```js
 module.exports = {
-  plugins: [
-    {
-      resolve: "gatsby-theme-minimal",
-      options: {},
-    },
-  ],
+  plugins: [{
+    resolve: 'gatsby-theme-seo',
+    options: {
+      // Adding variables in here will fail a build quickly and output
+      // an error message. Useful for catching env errors quickly.
+      requiredEnvVars: [
+       'URL'
+      ],
+
+      // The Google Tag Manager ID you want to add.
+      // Will only add in production by default.
+      gtmId: 'TEST-ID',
+
+      // Optional configuration for robots.txt
+      // See: https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt
+      // Example:
+      robotsOptions: {
+        host: 'https://www.example-override.com',
+        sitemap: 'https://www.example.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      },
+
+      // Optional configuration for sitemaps.
+      // For all available options, see:
+      // https://www.gatsbyjs.org/packages/gatsby-plugin-advanced-sitemap/?=gatsby-plugin-advan#options
+      // Example:
+      sitemapOptions: {
+       exclude: [
+        '/404.html',
+        '/404',
+        '/dev-404-page',
+        '/maintenance'
+      }
+    }
+  }],
 }
 ```
-
-That's it, you can now run your gatsby site using
-
-```shell
-yarn gatsby develop
-```
-
-Note that this site doesn't _do_ anything, so you're see a missing
-resources error. Create a simple page in `src/pages/index.js` to see a
-page on the root url.
-
-```javascript
-import React from "react"
-
-export default () => <div>My Site!</div>
-```
-
-## Doing more with themes
-
-You can use this as a place to start when developing themes. I
-generally suggest using [yarn
-workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) like the
-[gatsby-theme-examples repo
-does](https://github.com/ChristopherBiscardi/gatsby-theme-examples),
-but using `yarn link` or `npm link` is a viable alternative if you're
-not familiar with workspaces.
