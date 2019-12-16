@@ -1,4 +1,6 @@
-# The smallest possible Gatsby theme
+[![npm version](https://badge.fury.io/js/%40benrobertson%2Fgatsby-theme-seo.svg)](https://badge.fury.io/js/%40benrobertson%2Fgatsby-theme-seo)
+
+# Needs Update - The smallest possible Gatsby theme
 
 ## Quick Start
 
