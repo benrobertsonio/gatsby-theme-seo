@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'http://example-test.com'
+    siteUrl: 'http://example.com'
   },
   plugins: [{
     resolve: 'gatsby-theme-seo',
@@ -22,7 +22,19 @@ module.exports = {
       //   host: 'https://www.example-override.com',
       //   sitemap: 'https://www.example.com/sitemap.xml',
       //   policy: [{ userAgent: '*', allow: '/' }]
-      // }
+      // },
+
+      // Optional configuration for sitemaps.
+      // For all available options, see:
+      // https://www.gatsbyjs.org/packages/gatsby-plugin-advanced-sitemap/?=gatsby-plugin-advan#options
+      // Example:
+      // sitemapOptions: {
+      //  exclude: [
+      //   '/404.html',
+      //   '/404',
+      //   '/dev-404-page',
+      //   '/maintenance'
+      // },
     }
   }],
 };
