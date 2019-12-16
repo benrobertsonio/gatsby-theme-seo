@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/%40benrobertson%2Fgatsby-theme-seo.svg)](https://badge.fury.io/js/%40benrobertson%2Fgatsby-theme-seo)
+![npm](https://img.shields.io/npm/v/@benrobertson/gatsby-theme-seo)
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">
