@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/@benrobertson/gatsby-theme-seo)
+[![npm](https://img.shields.io/npm/v/@benrobertson/gatsby-theme-seo)](https://www.npmjs.com/package/@benrobertson/gatsby-theme-seo)
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">
