@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-theme-seo",
-  "version": "1.0.0",
+  "name": "@benrobertson/gatsby-theme-seo",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "Ben Robertson <hi@benrobertson.io>",
   "license": "MIT",
